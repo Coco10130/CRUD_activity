@@ -1,10 +1,9 @@
 import 'dart:async';
 
 import 'package:bloc/bloc.dart';
-import 'package:dio/dio.dart';
+import 'package:flutter/material.dart';
 import 'package:group_activity/features/student/mappers/student_model.dart';
 import 'package:group_activity/features/student/repos/students_repo.dart';
-import 'package:meta/meta.dart';
 
 part 'student_event.dart';
 part 'student_state.dart';

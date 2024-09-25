@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:group_activity/components/my_container.dart';
 import 'package:group_activity/features/student/bloc/student_bloc.dart';
@@ -82,6 +83,19 @@ class _BodyPageState extends State<BodyPage> {
               child: CircularProgressIndicator(),
             );
           } else if (state is StudentFetchSuccessfulState) {
+            if (state.students.isEmpty) {
+              return const Center(
+                child: Text(
+                  "No student record",
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold,
+                    fontFamily: "Poppins",
+                  ),
+                ),
+              );
+            }
             return RefreshIndicator(
               onRefresh: _refresh,
               child: ListView.builder(

@@ -4,7 +4,7 @@ import 'package:dio/dio.dart';
 import 'package:group_activity/features/student/mappers/student_model.dart';
 
 class StudentRepo {
-  static const String serverUrl = "http://192.168.43.96:8080";
+  static const String serverUrl = "http://192.168.1.21:8080";
 
   final _dio = Dio();
 
